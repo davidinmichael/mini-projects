@@ -11,6 +11,7 @@ int main()
     //Declare variables
     srand(time(0));
     int userInput;
+    int guesses = 0;
     int num = (rand() % MAX) + MIN;
 
     do
@@ -32,15 +33,19 @@ int main()
         {
             printf("%d is correct, you've won\n", userInput);
         }
-
-
+        guesses++;
+    
+    
     } while (userInput != num);
 
+    printf("You guessed %d times\n", guesses);
+    
 
     printf("\nIf you found this program helpful, please leave a like.\n\nAlso, if you have any questions, contributions or corrections, please comment it.\nThank you.\n");
-
+    
 
 
     return 0;
 }
+
 
