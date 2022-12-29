@@ -13,6 +13,13 @@ int main()
     printf("How many rows of Pyramid do you need?: ");
     scanf("%d", &row);
 
+    while(row < 2)
+    {
+        printf("\a\nPlease Enter a number greater than 2");
+        printf("\nHow many rows of Pyramid do you need?: ");
+        scanf("%d", &row);
+    }
+
     //Set conditional statements to print pyramid
     for(i = 1; i <= row; i++)
     {
@@ -30,7 +37,7 @@ int main()
         printf("\n");
     }
 
-    printf("\nIf you found this program helpful, please leave a like.\n\nAlso, if you have any questions, contributions or corrections, please comment it.\nThank you.\n");
+    printf("\a\nIf you found this program helpful, please leave a like.\n\nAlso, if you have any questions, contributions or corrections, please comment it.\nThank you.\n");
     
 
     return 0;
