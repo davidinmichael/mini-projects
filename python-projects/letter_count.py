@@ -2,6 +2,7 @@
 text = input("Type your text: ")
 count = 0
 consonant = 0
+space = 0
 
 for x in text:
     if x == 'a' or x == 'A':
@@ -14,11 +15,16 @@ for x in text:
         count += 1
     elif x == 'u' or x == 'U':
         count += 1
+    elif x == " ":
+        space += 1
+        continue
     else:
         consonant += 1
 total_letters = count + consonant
+
 print(f"Your text is: \"{text}\"")
 print(f"You have {total_letters} letters in your text")
 print(f"You have {count} vowels in your text")
 print(f"You have {consonant} consonants in your text")
+print(f"You have {space} space(s) in your text")
 print("If you found this program useful, please leave a like/star.\nIf you have any questions, contribution or suggestions, please leave it in the comment box.\nThank you")
